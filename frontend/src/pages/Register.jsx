@@ -51,7 +51,7 @@ const Register = () => {
         try {
 
             const existingUser = await axios.get(
-                `http://localhost:3001/patients?email=${formData.email}`
+                `http://localhost:3000/patients?email=${formData.email}`
             );
 
             if (existingUser.data.length > 0) {
@@ -76,7 +76,7 @@ const Register = () => {
             };
 
             await axios.post(
-                "http://localhost:3001/patients",
+                "http://localhost:3000/patients",
                 newPatient
             );
 
